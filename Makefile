@@ -1,9 +1,9 @@
 # Definindo as cores ANSI
-RED     := $(shell echo -e "\033[1;31m")
-GREEN   := $(shell echo -e "\033[1;32m")
-PURPLE  := $(shell echo -e "\033[0;35m")
-BLUE    := $(shell echo -e "\033[0;34m")
-RESET   := $(shell echo -e "\033[0m")
+RED     := $(shell echo "\033[1;31m")
+GREEN   := $(shell echo "\033[1;32m")
+PURPLE  := $(shell echo "\033[0;35m")
+BLUE    := $(shell echo "\033[0;34m")
+RESET   := $(shell echo "\033[0m")
 
 # Funções para imprimir texto com cores
 text = @echo "$(PURPLE)$(1)$(RESET)"
@@ -20,17 +20,11 @@ RM = rm -f
 
 TEST_SRC = $(wildcard tests/*_test.c) main.c
 TEST_OBJ = $(TEST_SRC:.c=.o)
-DEPS = $(TEST_OBJ:.o=.d)
-
-TEST_SRC = $(wildcard tests/*_test.c) main.c
-TEST_OBJ = $(TEST_SRC:.c=.o)
-DEPS = $(TEST_OBJ:.o=.d)
 
 LIBFT_PATH = ../libft
 LIBFT_SRC = $(wildcard $(LIBFT_PATH)/*.c)
 LIBFT_OBJ = $(LIBFT_SRC:.c=.o)
 LIBFT_LIB = $(LIBFT_PATH)/libft.a
-
 
 all: $(NAME)
 
@@ -46,12 +40,10 @@ $(LIBFT_LIB): $(LIBFT_OBJ)
 	@$(MAKE) -C $(LIBFT_PATH)
 	$(call text, "Checking if libft.a has been created [...]")
 
--include $(DEPS)
-
+# Regra para compilar objetos de teste
 %.o: %.c
 	$(call warn, "Compiling [...] $<")
 	@$(CC) $(CFLAGS) -c $< -o $@
-
 
 clean:
 	@$(RM) $(TEST_OBJ)
