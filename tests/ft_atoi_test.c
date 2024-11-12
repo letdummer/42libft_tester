@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 21:24:36 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/08 19:40:35 by ldummer-         ###   ########.fr       */
+/*   Updated: 2024/11/11 16:37:31 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_atoi_test()
 	char	*str;
 
 	printf("\n/===================================\\");
-	printf("\n|        Running ft_isalpha         |");
+	printf("\n|        Running ft_atoi            |");
 	printf("\n|             Tests                 |");
 	printf("\n\\===================================/\n");
 

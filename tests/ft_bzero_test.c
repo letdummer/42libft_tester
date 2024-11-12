@@ -6,15 +6,15 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 21:21:18 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/08 20:54:17 by ldummer-         ###   ########.fr       */
+/*   Updated: 2024/11/11 16:45:22 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include "../include/libft.h"
+#include "../include/libft.h"
 
 #include <stdio.h>
 
-int	bzero_test(void)
+void	ft_bzero_test()
 {
 	int	size;
 	int	str[50];
@@ -22,13 +22,17 @@ int	bzero_test(void)
 
 	i = 0;
 	size = 9;
-	ft_bzero(str, sizeof(str));
+	ft_bzero(str, size * sizeof(int));
+	
+	printf("\n/===================================\\");
+	printf("\n|        Running ft_bzero           |");
+	printf("\n|             Tests                 |");
+	printf("\n\\===================================/\n");
+	
 	while (i < size)
 	{
-		printf("\nTest %d\n", i);
-		printf("%d ", str[i]);
+		printf("Test %d: %d\n", i, str[i]);
 		i++;
 	}
 	printf("\n");
-	return (0);
-}  */
+}

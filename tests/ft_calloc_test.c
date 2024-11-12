@@ -6,17 +6,19 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 21:24:57 by lethallyn         #+#    #+#             */
-/*   Updated: 2024/11/06 13:34:43 by ldummer-         ###   ########.fr       */
+/*   Updated: 2024/11/11 16:43:13 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
+
 #include "../include/libft.h"
 #include <stdio.h>
+#include <string.h>
+#include <stddef.h>
 
-#define SIZE_MAX = 100
+#define SIZE_MAX 100
 
-int	*ft_calloc_test(void)
+int	*ft_calloc_test()
 {
 	int		n;
 	int		i;
@@ -27,11 +29,17 @@ int	*ft_calloc_test(void)
 	i = 0;
 	large_n = SIZE_MAX;
 	array = (int *) ft_calloc(n, sizeof(int));
+
+	printf("\n/===================================\\");
+	printf("\n|        Running ft_calloc          |");
+	printf("\n|             Tests                 |");
+	printf("\n\\===================================/\n");
 	if (array == NULL)
 	{
 		printf("Memory allocation failed!\n");
-		return (1);
+		return (NULL);
 	}
+
 	printf("Array elements after calloc: ");
 	while (i < n)
 	{
@@ -40,13 +48,19 @@ int	*ft_calloc_test(void)
 	}
 	printf("\n");
 	free(array);
+
+	printf("\nAttempting to allocate a large block of memory with |%zu| elements ...\n", large_n);
+
 	array = (int *) ft_calloc(large_n, sizeof(int));
 	if (array == NULL)
-		printf("Memory allocation failed!\n");
+	{
+		printf("[🔴] Failure: Memory allocation failed as expected due to the large size.\n");
+	}
 	else
 	{
-		printf("Unexpected allocation success!\n");
+		printf("[🟢] Success: Memory was allocated despite the large request.\n");
 		free(array);
 	}
-	return (0);
-} */
+
+	return (NULL);
+}

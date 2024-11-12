@@ -1,9 +1,13 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
+#include <stdio.h>
+#include <stdlib.h>
 #include <stddef.h>
 
 int		ft_atoi(const char *str);
+void	ft_bzero(void *s, size_t n);
+void	*ft_calloc(size_t nitems, size_t size);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -21,6 +25,9 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
+
+char	**ft_split(char const *s, char c);
+
 
 char	*ft_strchr(const char *str, int c);
 char	*ft_strdup(const char *str1);

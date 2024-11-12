@@ -2,9 +2,15 @@
 # define LIBFT_TESTS_H
 
 #include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 
-int	ft_atoi_test();
+int		ft_atoi_test();
+void	ft_bzero_test();
+void	*ft_calloc_test();
+
 int	ft_isalpha_test();
 int	ft_isdigit_test();
 int	ft_isalnum_test();
@@ -22,6 +28,8 @@ void	ft_putchar_fd_test();
 void	ft_putendl_fd_test();
 void	ft_putnbr_fd_test();
 void	ft_putstr_fd_test();
+
+char	**ft_split_test();
 
 char	*ft_strchr_test();
 void	ft_strdup_test();
