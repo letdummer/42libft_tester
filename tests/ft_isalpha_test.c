@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:48:03 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/11/08 20:54:00 by ldummer-         ###   ########.fr       */
+/*   Updated: 2024/11/12 19:05:25 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,11 @@ int	ft_isalpha_test(void)
 		{
 			res = 1;
 		}
-		if (res == expected)
-			printf("[🟢] Success: Input %c validated.\n", ch);
+		if (res == 1)
+			printf("[🟢] Success: Input %c validated with result %d.\n", ch, res);
 		else
 		{
 			printf("[🔴] Failure: Input %c did not pass. ASCII: %d\n", ch, ch);
-			printf("Expected: %d\tResult: %d\n", expected, res);
 		}
 		
 		i++;

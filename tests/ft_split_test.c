@@ -2,8 +2,8 @@
 
 char			**ft_split_test()
 {
-	char 	string[30] = " --this-is a-string";
-	char	ch = ' ';
+	char 	string[30] = "--this-is a-string";
+	char	ch = '-';
     char	**result;
 	int		i = 0;
  	

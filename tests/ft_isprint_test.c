@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:15:34 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/11/08 20:53:50 by ldummer-         ###   ########.fr       */
+/*   Updated: 2024/11/12 19:06:18 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int ft_isprint_test(void)
 		res = ft_isprint(ch);
 		if (res > 0)
 			res = 1;
-		if (res == ft_isprint(ch))
+		if (res == 1)
 			printf("[🟢] Success: Input %c validated.\n", ch);
 
 		else

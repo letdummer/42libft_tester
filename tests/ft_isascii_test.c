@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:39:56 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/11/08 20:53:57 by ldummer-         ###   ########.fr       */
+/*   Updated: 2024/11/12 19:05:59 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	ft_isascii_test(void)
 		res = ft_isascii(ch);
 		if (res > 0)
 			res = 1;
-		if (res == expected)
+		if (res == 1)
 			printf("[🟢] Success: Input %c validated. ASCII: %d\n", ch, ch);
 		else
 		{	printf("[🔴] Failure: Input %c did not pass. ASCII: %d\n", ch, ch);

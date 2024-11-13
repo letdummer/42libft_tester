@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:25:23 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/11/08 20:54:05 by ldummer-         ###   ########.fr       */
+/*   Updated: 2024/11/12 19:05:34 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	ft_isalnum_test()
 		expected = (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') || (ch >= '0' && ch <= '9');
 		res = ft_isalnum(ch);
 
-		if (res == expected)
+		if (res == 1)
 			printf("[🟢] Success: Input %c validated. ASCII: %d\n", ch, (int)ch);
 		else
 		{

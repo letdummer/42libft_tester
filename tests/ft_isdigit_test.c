@@ -6,7 +6,7 @@
 /*   By: ldummer- <ldummer-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:52:43 by ldummer-          #+#    #+#             */
-/*   Updated: 2024/11/08 20:53:54 by ldummer-         ###   ########.fr       */
+/*   Updated: 2024/11/12 19:06:12 by ldummer-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_isdigit_test(void)
 		res = ft_isdigit(ch);
 		if (res > 0)
 			res = 1;
-		if (res == ft_isdigit(ch))
+		if (res == 1)
 			printf("[🟢] Success: Input %c validated.\n", ch);
 		else
 		{
